@@ -12,7 +12,6 @@ ORDS and APEX are configured for a single database by the scripts at the first t
 ### Using this scripts
 * To run this terraform scripts, URLs of OCI Object Storage Service for the follwoing files is required.
   * ORDS (war extension)
-  * [Optional] Tomcat 8.5 (tar.gz extension) 
 * With using setup.sh, specify required information such as authentication, target database, compute instance and URLs for required files in an interview format.
   * You can also edit env-vars file directly.
 * Source env-vars
@@ -32,15 +31,18 @@ You can update the values in variables.tf for your environments to build if need
 Here is the typical steps to run terraform commands from launch to termination.  
 You will ask an admin password for the target database when issueing terraform commands.
 
+```
+on the console:
+$ cd <directory where *tf files are located>
+copy your ssh keys in the keys folder.
+```
+
 ```console
 $ cd <directory where *tf files are located> 
-$ ./setup.sh
 $ . env-vars
 $ terraform init  
 $ terraform plan 
-$ terraform apply  
-$ terraform show 
-$ terraform paln -destroy
+$ terraform apply 
 $ terraform destroy 
 ```
 
