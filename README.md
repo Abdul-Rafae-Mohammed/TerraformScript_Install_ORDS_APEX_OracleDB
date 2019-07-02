@@ -4,10 +4,19 @@
     #   | |_| |  _ < / ___ | |___| |___| |___
     #    \___/|_| \_/_/   \_\____|_____|_____|
 ***
+
+This script supports 2 deployment architectures:
+* Installing ORDS and APEX on a separate compute instance.
+* Installing ORDS and APEX on the Database Server itself.
+
 ## Compute Instance for Appication Express with ORDS with Terraform
 
 This creates a Compute Instance to run ORDS (Oracle Rest Data Service), which can be used for Oracle Applicaton Express (APEX). 
 ORDS and APEX are configured for a single database by the scripts at the first time. You can add additional databases to be monitored or managed later.
+
+## Installing ORDS on the Database Server
+
+This deployment installs the ORDS and APEX server on the database server. ORDS and APEX are configured for a single database by the scripts at the first time. You can add additional databases to be monitored or managed later.
 
 ### Using this scripts
 * To run this terraform scripts, URLs of OCI Object Storage Service for the follwoing files is required.
